@@ -1,38 +1,53 @@
-import React, { useState } from 'react'
+import React, { Component } from 'react'
+// import config from './config/config'
 import UserTable from './tables/UserTable'
 import AddUserForm from './forms/AddUserForm'
+import ImageTile from './tile'
+import logo from './assets/logo.svg'
+import icon from './assets/icon-no-avatar.png'
+import puzzleLordStein from './assets/puzzle_lord.jpeg'
+import puzzleLordSchafer from './assets/puzzle_lord_2.jpeg'
 
 
 
-const App = () => {
-  const usersData = [
-    { id: 1, name: 'Tania', username: 'floppydiskette' },
-    { id: 2, name: 'Craig', username: 'siliconeidolon' },
-    { id: 3, name: 'Ben', username: 'benisphere' },
-  ]
-  
-  const [ users, setUsers ] = useState(usersData)
 
-  const addUsers = user => {
-    user.id = users.length + 1
-    setUsers([...users, user])
+class App extends Component {
+  constructor () {
+    super()
+    this.state = {
+    }
   }
 
-  return (
-    <div className="container">
-      <h1>CRUD App with Hooks</h1>
-      <div className="flex-row">
-        <div className="flex-large">
-          <h2>Add user</h2>
-          <AddUserForm addUser={addUsers} />
+  callback = (code) => {
+    console.log("Callback is called")
+
+  }
+
+
+  render = () => {
+    // const codeValue = config.codeValue
+
+
+    return (
+      <div className="container">
+        <h1>Puzzle Palooza</h1>
+        <div className="flex-row">
+          <div className="flex-large">
+            <ImageTile image={logo} callback={this.callback}/>
+            <ImageTile image={icon} />
+          </div>
         </div>
-        <div className="flex-large">
-          <h2>View users</h2>
-          <UserTable users={users} />
+        <div className="flex-row">
+          <div className="flex-large">
+            <ImageTile image={puzzleLordStein}/>
+            <ImageTile image={puzzleLordSchafer}/>
+          </div>
         </div>
       </div>
-    </div>
-  )
+    )
+
+  } 
+
 }
 
 export default App

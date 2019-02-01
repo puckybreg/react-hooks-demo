@@ -346,14 +346,26 @@ dd {
   .content-section {
     padding: 60px 0; } }
 
+/* Special Buttons
+=============== */
+.tile-button {
+  display: flex;
+  flex: 1;
+  margin-right: .5rem;
+  margin-left: .5rem;
+  justify-content: center;
+}
+
 /* Grid
 =============== */
 .flex-small,
 .flex-large {
+  display: flex;
   padding-left: 1rem;
   padding-right: 1rem; }
 
 .flex-row {
+  display: flex;
   margin-left: -1rem;
   margin-right: -1rem; }
 
