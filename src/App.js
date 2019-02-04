@@ -5,6 +5,11 @@ import logo from './assets/logo.svg'
 import icon from './assets/icon-no-avatar.png'
 import puzzleLordStein from './assets/puzzle_lord.jpeg'
 import puzzleLordSchafer from './assets/puzzle_lord_2.jpeg'
+import stein1 from './assets/baseball_stein.jpg'
+import stein2 from './assets/baseball_stein2.jpg'
+import stein3 from './assets/Trans_Fats_Stein.jpg'
+import stein4 from './assets/screen_shot2.png'
+import stein5 from './assets/screen_shot.png'
 
 /* TODO:
   - Add new photos of stein
@@ -34,9 +39,12 @@ class App extends Component {
 
 
   render = () => {
-    const codeValue = 'Follow Me To the Answer' // config.codeValue
-    const { codeAccumulation } = this.state
+    const codeValue = process.env.PUZZLE_ANSWER
+    console.log("codeValue", codeValue)
 
+    const { codeAccumulation } = this.state
+    const env = process.env
+    console.log("env", env)
 
     return (
       <div className="container">
@@ -46,9 +54,9 @@ class App extends Component {
         }
         <div className="flex-row">
           <div className="flex-large">
-            <ImageTile image={logo} callback={() => this.callback('E')}/>
-            <ImageTile image={icon} callback={() => this.callback('G')}/>
-            <ImageTile image={icon} callback={() => this.callback('L')}/>
+            <ImageTile image={stein1} callback={() => this.callback('E')}/>
+            <ImageTile image={stein2} callback={() => this.callback('G')}/>
+            <ImageTile image={stein3} callback={() => this.callback('L')}/>
           </div>
         </div>
         <div className="flex-row">
@@ -61,8 +69,8 @@ class App extends Component {
         <div className="flex-row">
           <div className="flex-large">
             <ImageTile image={puzzleLordStein} callback={() => this.callback('N')} />
-            <ImageTile image={logo} callback={() => this.callback('A')} />
-            <ImageTile image={logo} callback={() => this.callback('B')} />
+            <ImageTile image={stein4} callback={() => this.callback('A')} />
+            <ImageTile image={stein5} callback={() => this.callback('B')} />
           </div>
         </div>
       </div>
