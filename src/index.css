@@ -358,6 +358,11 @@ dd {
   justify-content: center;
 }
 
+.puzzle-image {
+  /* height: 10em; */
+  max-width: 12em;
+}
+
 /* Grid
 =============== */
 .flex-small,

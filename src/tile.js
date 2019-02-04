@@ -6,7 +6,8 @@ const ImageTile = ({image, callback}) => {
 	return (
     <button className='tile-button' onClick={() => {callback()}}>
       <img 
-        src={image} 
+        className='puzzle-image'
+        src={image}
         alt='puzzle image' 
       />
     </button>

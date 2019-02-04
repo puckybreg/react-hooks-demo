@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 // import config from './config/config'
 import ImageTile from './tile'
-import logo from './assets/logo.svg'
-import icon from './assets/icon-no-avatar.png'
 import puzzleLordStein from './assets/puzzle_lord.jpeg'
 import puzzleLordSchafer from './assets/puzzle_lord_2.jpeg'
 import stein1 from './assets/baseball_stein.jpg'
