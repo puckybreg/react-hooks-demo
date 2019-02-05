@@ -15,7 +15,8 @@ import stein5 from './assets/screen_shot.png'
   - Add an enviroment and config set up
 
 */
-const code = 'EGHY'
+
+const code = process.env.REACT_APP_PUZZLE_CODE
 
 class App extends Component {
   constructor () {
@@ -37,12 +38,9 @@ class App extends Component {
 
 
   render = () => {
-    const codeValue = process.env.PUZZLE_ANSWER
-    console.log("codeValue", codeValue)
+    const codeValue = process.env.REACT_APP_PUZZLE_ANSWER
 
     const { codeAccumulation } = this.state
-    const env = process.env
-    console.log("env", env)
 
     return (
       <div className="container">
