@@ -1,4 +1,5 @@
 import React from 'react'
+import trigger from './assets/screen_shot2.png'
 
 const ImageTile = ({image, callback}) => {
 
@@ -7,7 +8,8 @@ const ImageTile = ({image, callback}) => {
     <button className='tile-button' onClick={() => {callback()}}>
       <img 
         className='puzzle-image'
-        src={image}
+        // src='./assets/screen_shot2.png'
+        src={trigger}
         alt='puzzle image' 
       />
     </button>

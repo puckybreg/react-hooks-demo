@@ -42,6 +42,7 @@ class App extends Component {
   render = () => {
     const codeValue = process.env.REACT_APP_PUZZLE_ANSWER
 
+    const image1 = process.env.REACT_APP_PUZZLE_IMAGE1
     const { codeAccumulation } = this.state
 
     return (
@@ -51,10 +52,10 @@ class App extends Component {
           ? <div className="flex-row">
               <div className="flex-large">
                 <div>{codeValue}</div>
-                <ImageTile image={stien3} />
-                <ImageTile image={stien2} />
-                <ImageTile image={stien4} />
-                <ImageTile image={stien1} />
+                <ImageTile image={"./assets/stien1.jpg"} callback={() => null}/>
+                <ImageTile image={process.env.REACT_APP_PUZZLE_IMAGE2} callback={() => null}/>
+                <ImageTile image={process.env.REACT_APP_PUZZLE_IMAGE3} callback={() => null}/>
+                <ImageTile image={process.env.REACT_APP_PUZZLE_IMAGE4} callback={() => null}/>
               </div>
             </div>
           : <div>
