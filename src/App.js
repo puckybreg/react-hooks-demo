@@ -8,10 +8,12 @@ import stein2 from './assets/baseball_stein2.jpg'
 import stein3 from './assets/Trans_Fats_Stein.jpg'
 import stein4 from './assets/screen_shot2.png'
 import stein5 from './assets/screen_shot.png'
-import stien1 from './assets/stien1.jpg'
-import stien2 from './assets/stien2.jpg'
-import stien3 from './assets/stien3.jpg'
-import stien4 from './assets/stien4.jpg'
+import hammond1 from './assets/hat_hammond.jpg'
+import ostrander from './assets/ostrander.jpg'
+import stien1 from './assets/unnamed-15.jpg'
+import stien2 from './assets/unnamed-17.jpg'
+import stien3 from './assets/unnamed.jpg'
+import stien4 from './assets/unnamed-100.jpg'
 
 /* TODO:
   - Add new photos of stein
@@ -44,17 +46,18 @@ class App extends Component {
 
     const { codeAccumulation } = this.state
 
+    const title = 'Twitch & Shout'
+
     return (
       <div className="container">
-        <h1>Puzzle Palooza</h1>
+        <h1>{title}</h1>
         { (code === codeAccumulation)
           ? <div className="flex-row">
               <div className="flex-large">
-                <div>{codeValue}</div>
                 <ImageTile image={stien3} />
+                <ImageTile image={stien1} />
                 <ImageTile image={stien2} />
                 <ImageTile image={stien4} />
-                <ImageTile image={stien1} />
               </div>
             </div>
           : <div>
@@ -67,9 +70,9 @@ class App extends Component {
                 </div>
                 <div className="flex-row">
                   <div className="flex-large">
-                    <ImageTile image={puzzleLordStein} callback={() => this.callback('H')} />
+                    <ImageTile image={hammond1} callback={() => this.callback('H')} />
                     <ImageTile image={puzzleLordSchafer} callback={() => this.callback('Y')} />
-                    <ImageTile image={puzzleLordStein} callback={() => this.callback('M')} />
+                    <ImageTile image={ostrander} callback={() => this.callback('M')} />
                   </div>
                 </div>
                 <div className="flex-row">
@@ -77,48 +80,6 @@ class App extends Component {
                     <ImageTile image={puzzleLordStein} callback={() => this.callback('N')} />
                     <ImageTile image={stein4} callback={() => this.callback('A')} />
                     <ImageTile image={stein5} callback={() => this.callback('B')} />
-                  </div>
-                </div>
-                <div className="flex-row">
-                  <div className="flex-large">
-                    <ImageTile image={puzzleLordSchafer} callback={() => this.callback('Z')} />
-                    <ImageTile image={stein5} callback={() => this.callback('X')} />
-                    <ImageTile image={stein4} callback={() => this.callback('Y')} />
-                  </div>
-                </div>
-                <div className="flex-row">
-                  <div className="flex-large">
-                    <ImageTile image={puzzleLordSchafer} callback={() => this.callback('Q')} />
-                    <ImageTile image={stein5} callback={() => this.callback('U')} />
-                    <ImageTile image={stein4} callback={() => this.callback('S')} />
-                  </div>
-                </div>
-                <div className="flex-row">
-                  <div className="flex-large">
-                    <ImageTile image={stein2} callback={() => this.callback('I')} />
-                    <ImageTile image={stein5} callback={() => this.callback('J')} />
-                    <ImageTile image={stein4} callback={() => this.callback('S')} />
-                  </div>
-                </div>
-                <div className="flex-row">
-                  <div className="flex-large">
-                    <ImageTile image={puzzleLordSchafer} callback={() => this.callback('Q')} />
-                    <ImageTile image={stein1} callback={() => this.callback('L')} />
-                    <ImageTile image={stein4} callback={() => this.callback('S')} />
-                  </div>
-                </div>
-                <div className="flex-row">
-                  <div className="flex-large">
-                    <ImageTile image={puzzleLordSchafer} callback={() => this.callback('I')} />
-                    <ImageTile image={stein4} callback={() => this.callback('M')} />
-                    <ImageTile image={stein5} callback={() => this.callback('S')} />
-                  </div>
-                </div>
-                <div className="flex-row">
-                  <div className="flex-large">
-                    <ImageTile image={puzzleLordSchafer} callback={() => this.callback('Q')} />
-                    <ImageTile image={stein3} callback={() => this.callback('W')} />
-                    <ImageTile image={stein4} callback={() => this.callback('S')} />
                   </div>
                 </div>
             </div>
