@@ -10,19 +10,17 @@ import stein4 from './assets/screen_shot2.png'
 import stein5 from './assets/screen_shot.png'
 import hammond1 from './assets/hat_hammond.jpg'
 import ostrander from './assets/ostrander.jpg'
-import stien1 from './assets/unnamed-15.jpg'
-import stien2 from './assets/unnamed-17.jpg'
-import stien3 from './assets/unnamed.jpg'
-import stien4 from './assets/unnamed-100.jpg'
 
 /* TODO:
-  - Add new photos of stein
   - Add animations after correct answer
-  - Add an enviroment and config set up
-
 */
 
 const code = process.env.REACT_APP_PUZZLE_CODE
+
+const image1 = process.env.REACT_APP_PUZZLE_IMAGES1
+const image2 = process.env.REACT_APP_PUZZLE_IMAGES2
+const image3 = process.env.REACT_APP_PUZZLE_IMAGES3
+const image4 = process.env.REACT_APP_PUZZLE_IMAGES4
 
 class App extends Component {
   constructor () {
@@ -47,17 +45,18 @@ class App extends Component {
     const { codeAccumulation } = this.state
 
     const title = 'Twitch & Shout'
-
     return (
       <div className="container">
-        <h1>{title}</h1>
+        <div className="text-center">
+          <h1 class>{title}</h1>
+        </div>
         { (code === codeAccumulation)
           ? <div className="flex-row">
               <div className="flex-large">
-                <ImageTile image={stien3} />
-                <ImageTile image={stien1} />
-                <ImageTile image={stien2} />
-                <ImageTile image={stien4} />
+                <ImageTile image={require(`./assets/${image1}`)} callback={() => null}/>
+                <ImageTile image={require(`./assets/${image2}`)} callback={() => null}/>
+                <ImageTile image={require(`./assets/${image3}`)} callback={() => null}/>
+                <ImageTile image={require(`./assets/${image4}`)} callback={() => null}/>
               </div>
             </div>
           : <div>
