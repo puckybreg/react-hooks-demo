@@ -31,16 +31,14 @@ class App extends Component {
   }
 
   callback = (code) => {
-    console.log("Code", code)
     const { codeAccumulation } = this.state
     const newCode = codeAccumulation + code
-    console.log("newCode", newCode)
     this.setState({codeAccumulation: newCode})
   }
 
 
   render = () => {
-    const codeValue = process.env.REACT_APP_PUZZLE_ANSWER
+    // const codeValue = process.env.REACT_APP_PUZZLE_ANSWER
 
     const { codeAccumulation } = this.state
 
