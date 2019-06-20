@@ -4,7 +4,7 @@ import useRandomColor from './AbstractColorHook'
 
 
 
-export const RefactoredColorHook = () => {
+const RefactoredColorHook = () => {
   const colors = ["cyan", "blue", "green", "black", "purple", "red", "navy", "teal", "olive", "yellow", "maroon"];
 
   // Array Destructuring!
@@ -19,6 +19,7 @@ export const RefactoredColorHook = () => {
         backgroundColor: color
       }}
     >
+      <h2 style={{ color: "#fff" }}>RefactoredColorHook</h2>
       <h2 style={{ color: "#fff" }}>Click below button to change color</h2>
       <br />
       <Button onClick={setColor}>Change</Button>
