@@ -28,6 +28,7 @@ class ColorBanner extends React.Component {
           backgroundColor: color
         }}
       >
+        <h2 style={{ color: "#fff" }}>ColorBanner</h2>
         <h2 style={{ color: "#fff" }}>Click below button to change color</h2>
         <br />
         <Button onClick={() => this.changeColor(colors, lenColors)}>Change</Button>

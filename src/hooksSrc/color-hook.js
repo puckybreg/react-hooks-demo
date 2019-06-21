@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button } from "@material-ui/core";
 
 
-export const ColorHook = () => {
+const ColorHook = () => {
   const colors = ["cyan", "blue", "green", "black", "purple", "red", "navy", "teal", "olive", "yellow", "maroon"];
   const lenColors = colors.length;
 
@@ -24,6 +24,7 @@ export const ColorHook = () => {
         backgroundColor: color
       }}
     >
+      <h2 style={{ color: "#fff" }}>ColorHook</h2>
       <h2 style={{ color: "#fff" }}>Click below button to change color</h2>
       <br />
       <Button onClick={changeColor}>Change</Button>
