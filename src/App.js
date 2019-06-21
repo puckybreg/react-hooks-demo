@@ -10,6 +10,7 @@ import BasicHook from "./hooksSrc/basic-hook"
 import ColorHook from "./hooksSrc/color-hook"
 import RefactoredColorHook from "./hooksSrc/RefactoredColorHook"
 import ColorBanner from "./hooksSrc/ColorBanner"
+import ColorHOC from "./hooksSrc/ColorHoc"
 import { Grid } from "@material-ui/core";
 
 
@@ -42,7 +43,8 @@ class App extends Component {
         <div>
           {/* <ColorHook/> */}
           {/* <RefactoredColorHook/> */}
-          <ColorBanner/>
+          {/* <ColorBanner/> */}
+          <ColorHOC/>
         </div>
     )
 

@@ -1,22 +1,9 @@
 import React, { useState } from "react";
 import { Button } from "@material-ui/core";
 
-// function withSubscription(WrappedComponent, selectData) {
-
-//   return class extends React.Component {
-//     constructor () {
-//       super()
-//       this.state = {
-//         color: 'red'
-//       }
-//     }
-//   }
-// }
-
 class ColorBanner extends React.Component {
   constructor () {
     super()
-    // this.changeColor = this.changeColor.bind(this)
     this.state = {
       color: 'red'
     }
