@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "3.9.2",
+    "@material-ui/icons": "^4.2.0",
     "faker": "4.1.0",
     "lodash.compose": "2.4.1",
     "lodash.isequal": "4.5.0",

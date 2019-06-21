@@ -1,20 +1,22 @@
 import React, { useState } from "react";
 import { Button } from "@material-ui/core";
+import useRandomColor from "./AbstractColorHook"
 
 
 const ColorHook = () => {
   const colors = ["cyan", "blue", "green", "black", "purple", "red", "navy", "teal", "olive", "yellow", "maroon"];
-  const lenColors = colors.length;
 
   // Array Destructuring!
   // Using state inside a functional component
-  const [color, setColor] = useState("red");
+  // const [color, setColor] = useState("red");
 
-  const changeColor = () => {
-    const index = Math.floor(Math.random() * lenColors);
-    const pickedColor = colors[index];
-    setColor(pickedColor);
-  };
+  const [ color, getNewColor] = useRandomColor(colors, "olive")
+
+  // const changeColor = () => {
+  //   const index = Math.floor(Math.random() * lenColors);
+  //   const pickedColor = colors[index];
+  //   setColor(pickedColor);
+  // };
 
   return (
     <div
@@ -27,7 +29,7 @@ const ColorHook = () => {
       <h2 style={{ color: "#fff" }}>ColorHook</h2>
       <h2 style={{ color: "#fff" }}>Click below button to change color</h2>
       <br />
-      <Button onClick={changeColor}>Change</Button>
+      <Button onClick={getNewColor}>Change</Button>
     </div>
   );
 
